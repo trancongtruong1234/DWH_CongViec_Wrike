@@ -119,7 +119,7 @@ Select * from [date]
 Select * from nhanvien
 select * from Timelog_Category
 select * from loaicongviec
-select * from congviec order by workID
+select * from congviec order by LoaiCongViecID
 go
 BACKUP DATABASE DB_Goc_Wrike
 TO DISK = 'D:\DB_Goc_Wrike.bak';
@@ -160,3 +160,5 @@ group by WorkID
 
 select count (workID) as SoLuong, workID from CongViec 
 group by WorkID having count (workID) >1
+go
+select * from duan order by ngaydenhan
